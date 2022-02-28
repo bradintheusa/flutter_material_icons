@@ -23,8 +23,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
-
-
   final String title;
 
   @override
@@ -32,28 +30,33 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-             Icon(IconData(0xf30f, fontFamily: 'sampleIcons'), size:88,  color: Colors.brown),
-             Icon(Icons.account_circle, size:88,  color: Colors.orange,),
-             Text(
-              'Icons.account_circle',
-            ),
-
-          ],
+        appBar: AppBar(
+          title: Text(widget.title),
         ),
-      )
-
-    );
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const <Widget>[
+              Icon(IconData(0xf30f, fontFamily: 'sampleIcons'),
+                  size: 88, color: Colors.brown),
+              Padding(padding: EdgeInsets.all(5)),
+              Text(
+                'From brandico.ttf',
+              ),
+              Padding(padding: EdgeInsets.all(10)),
+              Icon(
+                Icons.account_circle,
+                size: 88,
+                color: Colors.orange,
+              ),
+              Text(
+                'Icons.account_circle',
+              ),
+            ],
+          ),
+        ));
   }
 }
